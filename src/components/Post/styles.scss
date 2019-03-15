@@ -1,0 +1,58 @@
+@import "../../styles/_vars";
+
+.eats-post {
+  margin-bottom: 50px;
+
+  @media (min-width: $mid-bp) {
+    &.eats-post--two-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0 20px;
+    }
+  }
+}
+
+.eats-post-date {
+  padding: 20px 0 15px;
+  color: $gray;
+  display: block;
+}
+
+.eats-post-image {
+  max-width: 100%;
+}
+
+.eats-post-link {
+  color: $orange;
+  margin: 0;
+}
+
+.eats-post-link:hover {
+  color: $dark_blue;
+}
+
+.eats-post-title {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.2;
+
+  @media (min-width: $mid-bp) {
+    padding-right: 200px;
+  }
+}
+
+.eats-post-content {
+  color: $gray;
+  line-height: 1.4;
+
+  img.alignleft {
+    float: left;
+    margin-right: 20px;
+  }
+
+  img.alignright {
+    float: right;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../styles/_vars";
+
+.eats-header {
+  background-color: $light-blue;
+}
+
+.eats-nav {
+  background-color: $blue;
+
+  @media (min-width: $mid-bp) {
+    display: block;
+    height: 53px;
+    padding: 0 40px 0 0;
+  }
+}
+
+.eats-header-link {
+  color: $white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+
+  @media (min-width: $mid-bp) {
+    padding: 10px 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &:hover {
+    color: $yellow;
+  }
+
+  .eats-icon-logo {
+    font-size: 30px;
+
+    &::before {
+      margin: 0;
+    }
+  }
+}
+
+.eats-header-name {
+  display: none;
+
+  @media (min-width: $mid-bp) {
+    display: inline;
+    padding-left: 25px;
+    font-weight: 600;
+  }
+}
+
+.eats-icon-menu {
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  transform: translateY(50%);
+  cursor: pointer;
+  left: 10px;
+}
