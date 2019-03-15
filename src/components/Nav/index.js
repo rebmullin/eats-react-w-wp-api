@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./styles.scss";
 
-// TODO: get through WP API
 const Nav = () => (
   <nav className="eats-nav">
     <ul className="eats-nav-list">

@@ -13,9 +13,13 @@
 }
 
 .eats-post-date {
-  padding: 20px 0 15px;
+  padding: 10px 0 5px;
   color: $gray;
   display: block;
+
+  @media (min-width: $mid-bp) {
+    padding: 20px 0 5px;
+  }
 }
 
 .eats-post-image {

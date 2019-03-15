@@ -13,7 +13,6 @@ class Post extends React.Component {
     if (!this.props.post) {
       const { slug } = this.props.match.params;
 
-      // TODO: update url
       fetch(`http://wpreb.x10host.com/wp-json/wp/v2/posts?slug=${slug}`)
         .then(data => data.json())
         .then(posts => {

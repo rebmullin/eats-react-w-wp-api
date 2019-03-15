@@ -16,6 +16,7 @@
 
 .eats-header-link {
   color: $white;
+  padding: 0 10px;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -23,9 +24,9 @@
   height: 53px;
 
   @media (min-width: $mid-bp) {
-    padding: 10px 40px;
     display: inline-flex;
-    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 40px;
   }
 
   &:hover {
@@ -37,6 +38,7 @@
 
     &::before {
       margin: 0;
+      width: auto;
     }
   }
 }
@@ -46,8 +48,20 @@
 
   @media (min-width: $mid-bp) {
     display: inline;
-    padding-left: 25px;
+    padding-left: 10px;
     font-weight: 600;
+  }
+}
+
+.eats-header-logo {
+  background-color: $light-blue;
+  display: flex;
+  height: 53px;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $mid-bp) {
+    display: block;
   }
 }
 

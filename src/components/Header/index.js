@@ -7,7 +7,7 @@ import "./styles.scss";
 class Header extends React.Component {
   state = {
     desktop: false,
-    menuOpen: false,
+    menuOpen: false
   };
 
   componentDidMount() {
@@ -24,18 +24,18 @@ class Header extends React.Component {
     const deskTopBp = window.matchMedia("(min-width: 900px)");
     if (deskTopBp.matches) {
       this.setState({
-        desktop: true,
+        desktop: true
       });
     } else {
       this.setState({
-        desktop: false,
+        desktop: false
       });
     }
   }, 500);
 
   toggleMenu = () => {
     this.setState({
-      menuOpen: !this.state.menuOpen,
+      menuOpen: !this.state.menuOpen
     });
   };
 
@@ -49,10 +49,13 @@ class Header extends React.Component {
         {menuOpen && !desktop && (
           <i onClick={this.toggleMenu} className="eats-icon-menu icon-close" />
         )}
-        <Link className="eats-header-link" to="/">
-          <i className="eats-icon-logo icon-logo" />
-          <span className="eats-header-name">Eats.</span>
-        </Link>
+
+        <div className="eats-header-logo">
+          <Link className="eats-header-link" to="/">
+            <i className="eats-icon-logo icon-logo" />
+            <span className="eats-header-name">Eats.</span>
+          </Link>
+        </div>
 
         {(menuOpen || desktop) && <Nav />}
       </header>
